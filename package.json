@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon -x babel-node ./test.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,9 @@
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.13.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-node": "^5.0.2",
+    "tape": "^4.4.0"
   }
 }
