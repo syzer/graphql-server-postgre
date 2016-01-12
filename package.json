@@ -12,6 +12,7 @@
     "babel": "^5.8.34",
     "babel-preset-node5": "^6.1.20-3",
     "bluebird": "^3.0.5",
+    "dotenv": "^1.2.0",
     "express": "^4.13.3",
     "express-graphql": "^0.4.4",
     "faker": "^3.0.1",
