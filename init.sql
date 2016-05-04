@@ -1,0 +1,1 @@
+CREATE DATABASE relay WITH OWNER postgres;
