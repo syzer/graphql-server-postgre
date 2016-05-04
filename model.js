@@ -1,8 +1,8 @@
-module.exports = function model(Conn, Sequelize) {
+module.exports = function modelSql(Conn, Sequelize) {
     return {
         getArticleSchema,
         getAuthorSchema
-    };
+    }
 
     function getArticleSchema() {
         return Conn.define('article', {
@@ -18,7 +18,7 @@ module.exports = function model(Conn, Sequelize) {
                 type: Sequelize.STRING,
                 allowNull: false
             }
-        });
+        })
     }
 
     function getAuthorSchema() {
@@ -37,6 +37,6 @@ module.exports = function model(Conn, Sequelize) {
                     isEmail: true
                 }
             }
-        });
+        })
     }
-};
+}

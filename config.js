@@ -1,6 +1,6 @@
 require('dotenv').load();
 
-export const config =  {
+export default {
     host: process.env.DB_HOST,
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
@@ -8,4 +8,4 @@ export const config =  {
     app: {
         port: process.env.APP_PORT
     }
-};
+}

@@ -1,9 +1,11 @@
 import Sequelize from 'sequelize'
-import Faker from 'faker'
-import _ from 'lodash'
 import model from './model'
+import repoFixture from './repoFixture'
+import faker from 'faker'
+import _ from 'lodash'
+import config from './config'
 
-export const construct = (config, repoFixture) => {
+export default (config, repoFixture) => {
     let models;
 
     return {

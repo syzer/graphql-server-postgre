@@ -1,6 +1,6 @@
 import faker from 'faker'
 
-module.exports = function repositoryFixture (_, faker) {
+module.exports = function repositoryFixture(_, faker) {
 
     return {
         maybeSeedDb
@@ -12,7 +12,7 @@ module.exports = function repositoryFixture (_, faker) {
     }
 
     function seed(models) {
-        let {article, author} = models; // such es6
+        let {article, author} = models
         console.log('bazinga', models, article)
 
         return author.create({
@@ -25,7 +25,7 @@ module.exports = function repositoryFixture (_, faker) {
                 abstract: `${faker.company.bs()}`,
                 title: `Sample article by ${author.firstName}`,
                 content: `here is some content ${faker.company.bs()}`
-            });
-        });
+            })
+        })
     }
-};
+}

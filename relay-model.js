@@ -1,4 +1,5 @@
 import Db from './model'
+import repo from './repo'
 
 import {
     GraphQLObjectType,
@@ -147,7 +148,7 @@ const query = new GraphQLObjectType({
 
 const mutation = new GraphQLObjectType({
     name: 'Mutations',
-    description: 'Functions to set stuff',
+    description: 'setters',
     fields () {
         return {
             addPerson: {
