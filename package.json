@@ -1,20 +1,20 @@
 {
   "name": "gql-with-postgre",
   "version": "1.0.0",
-  "description": "",
+  "description": "a hack with sequelize and GraphQL",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -x babel-node ./test.js"
+    "test": "nodemon -x babel-node ./test.js",
+    "start": "nodemon -x babel-node ./server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel": "^5.8.34",
-    "babel-preset-node5": "^6.1.20-3",
     "bluebird": "^3.0.5",
     "dotenv": "^1.2.0",
-    "express": "^4.13.3",
-    "express-graphql": "^0.4.4",
+    "express": "^4.13.4",
+    "express-graphql": "^0.5.1",
     "faker": "^3.0.1",
     "graphql": "^0.4.12",
     "graphql-relay": "^0.3.5",
@@ -24,7 +24,7 @@
     "sequelize": "^3.13.0"
   },
   "devDependencies": {
-    "babel-preset-es2015-node": "^5.0.2",
+    "babel-preset-es2015-node": "^5.0.5",
     "tape": "^4.4.0"
   }
 }
