@@ -149,31 +149,29 @@ const query = new GraphQLObjectType({
 const mutation = new GraphQLObjectType({
     name: 'Mutations',
     description: 'setters',
-    fields () {
-        return {
-            addPerson: {
-                type: personType,
-                args: {
-                    firstName: {
-                        type: new GraphQLNonNull(GraphQLString)
-                    },
-                    lastName: {
-                        type: new GraphQLNonNull(GraphQLString)
-                    },
-                    email: {
-                        type: new GraphQLNonNull(GraphQLString)
-                    }
+    fields: () => ({
+        addPerson: {
+            type: personType,
+            args: {
+                firstName: {
+                    type: new GraphQLNonNull(GraphQLString)
                 },
-                resolve (source, args) {
-                    return Db.models.person.create({
-                        firstName: args.firstName,
-                        lastName: args.lastName,
-                        email: args.email.toLowerCase()
-                    })
+                lastName: {
+                    type: new GraphQLNonNull(GraphQLString)
+                },
+                email: {
+                    type: new GraphQLNonNull(GraphQLString)
                 }
+            },
+            resolve (source, args) {
+                return Db.models.person.create({
+                    firstName: args.firstName,
+                    lastName: args.lastName,
+                    email: args.email.toLowerCase()
+                })
             }
-        };
-    }
+        }
+    })
 })
 
 export default new GraphQLSchema({
